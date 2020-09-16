@@ -31,6 +31,9 @@ protocol ProfileViewModel {
     
     var onError: ((String) -> ())? { get set }
     var errorMessage: String { get set }
+    
+    func getUserProfile() -> (String, String)
+    func checkIsLogin() -> Bool
 }
 
 class ProfileViewModelImplement: NSObject, ProfileViewModel {
@@ -115,6 +118,18 @@ class ProfileViewModelImplement: NSObject, ProfileViewModel {
         viewType.value = .login
     }
     
+    func getUserProfile() -> (String, String) {
+        let userDefault = UserDefaults.standard
+        let userName = userDefault.string(forKey: USERDEFAULT_KEYS.USER_NAME) ?? ""
+        let password = userDefault.string(forKey: USERDEFAULT_KEYS.PASSWORD) ?? ""
+        return (userName, password)
+    }
+    
+    func checkIsLogin() -> Bool {
+        let isLogin = UserDefaults.standard.bool(forKey: USERDEFAULT_KEYS.IS_LOGIN)
+        return isLogin
+    }
+    
     var onError: ((String) -> ())?
     
     var errorMessage: String = "" {
@@ -129,18 +144,6 @@ class ProfileViewModelImplement: NSObject, ProfileViewModel {
         userDefault.setValue(userName, forKey: USERDEFAULT_KEYS.USER_NAME)
         userDefault.setValue(password, forKey: USERDEFAULT_KEYS.PASSWORD)
         userDefault.setValue(true, forKey: USERDEFAULT_KEYS.IS_LOGIN)
-    }
-    
-    private func getUserProfile() -> (String, String) {
-        let userDefault = UserDefaults.standard
-        let userName = userDefault.string(forKey: USERDEFAULT_KEYS.USER_NAME) ?? ""
-        let password = userDefault.string(forKey: USERDEFAULT_KEYS.PASSWORD) ?? ""
-        return (userName, password)
-    }
-    
-    private func checkIsLogin() -> Bool {
-        let isLogin = UserDefaults.standard.bool(forKey: USERDEFAULT_KEYS.IS_LOGIN)
-        return isLogin
     }
     
     private func logOut() {

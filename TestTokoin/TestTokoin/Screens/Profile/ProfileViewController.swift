@@ -15,6 +15,9 @@ class ProfileViewController: BaseViewController {
     @IBOutlet var tfPassword: UITextField!
     @IBOutlet var tfConfirm: UITextField!
     
+    @IBOutlet weak var lbUsername: UILabel!
+    
+    
     @IBOutlet weak var btHasAccount: UIButton!
     @IBOutlet var btRegister: UIButton!
     
@@ -26,8 +29,6 @@ class ProfileViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard))
         self.view.addGestureRecognizer(tapGesture)
@@ -58,11 +59,15 @@ class ProfileViewController: BaseViewController {
                 wSelf.title = "Profile"
                 wSelf.btRegister.setTitle("Logout", for: .normal)
                 wSelf.viewRegister.isHidden = true
+                let (username, _) = viewModel.getUserProfile()
+                wSelf.lbUsername.text = "Username: " + username
             case .register:
                 wSelf.title = "Register"
                 wSelf.btRegister.setTitle("Register", for: .normal)
                 wSelf.btHasAccount.setTitle("Has account?", for: .normal)
                 wSelf.tfConfirm.isHidden = false
+                
+                
             }
             
             wSelf.tabBarController?.tabBar.items?[2].title = "Profile"

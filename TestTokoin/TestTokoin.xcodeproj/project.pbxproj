@@ -28,6 +28,7 @@
 		52CABB092510D85D00F3D371 /* UIDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CABB082510D85D00F3D371 /* UIDate.swift */; };
 		52CABB0D2510DAB300F3D371 /* SettingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CABB0C2510DAB300F3D371 /* SettingModel.swift */; };
 		52CABB0F2510DB3D00F3D371 /* HomeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CABB0E2510DB3D00F3D371 /* HomeViewModelTests.swift */; };
+		52CABB162511EF7900F3D371 /* ProfileViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CABB152511EF7900F3D371 /* ProfileViewModelTest.swift */; };
 		52E89A3C250BEE7700C5DCA7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E89A3B250BEE7700C5DCA7 /* AppDelegate.swift */; };
 		52E89A3E250BEE7700C5DCA7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E89A3D250BEE7700C5DCA7 /* SceneDelegate.swift */; };
 		52E89A43250BEE7700C5DCA7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52E89A41250BEE7700C5DCA7 /* Main.storyboard */; };
@@ -77,6 +78,7 @@
 		52CABB082510D85D00F3D371 /* UIDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIDate.swift; sourceTree = "<group>"; };
 		52CABB0C2510DAB300F3D371 /* SettingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingModel.swift; sourceTree = "<group>"; };
 		52CABB0E2510DB3D00F3D371 /* HomeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelTests.swift; sourceTree = "<group>"; };
+		52CABB152511EF7900F3D371 /* ProfileViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModelTest.swift; sourceTree = "<group>"; };
 		52E89A38250BEE7700C5DCA7 /* TestTokoin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestTokoin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52E89A3B250BEE7700C5DCA7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52E89A3D250BEE7700C5DCA7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -306,6 +308,7 @@
 			children = (
 				52E89A54250BEE7900C5DCA7 /* Info.plist */,
 				52CABB0E2510DB3D00F3D371 /* HomeViewModelTests.swift */,
+				52CABB152511EF7900F3D371 /* ProfileViewModelTest.swift */,
 			);
 			path = TestTokoinTests;
 			sourceTree = "<group>";
@@ -611,6 +614,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52CABB162511EF7900F3D371 /* ProfileViewModelTest.swift in Sources */,
 				52CABB0F2510DB3D00F3D371 /* HomeViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

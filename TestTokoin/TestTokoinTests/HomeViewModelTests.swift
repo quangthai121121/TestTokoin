@@ -45,7 +45,7 @@ class HomeViewModelTests: XCTestCase {
     // Testing fetch articles list method is calling properly
     // Expectation is onError or datasourse observer is called
     
-    func testFetchVehiclesListCalled() {
+    func testFetchArticlesListCalled() {
         let expectation = XCTestExpectation(description: "Articles List fetch")
         
         viewModel.onError = { _ in

@@ -58,8 +58,7 @@ class HomeViewController: BaseViewController {
         }
         
         tableView.dataSource = dataSource
-        viewModel.dataSource.bindAndFire { [weak self] (list) in
-            
+        viewModel.dataSource.bindAndFire { [weak self](list) in
             self?.tableView.reloadData()
             self?.isLoadingMore = false
             self?.refreshControl.endRefreshing()

@@ -415,6 +415,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username: test" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oQB-X5-9Ob">
+                                <rect key="frame" x="15" y="170" width="384" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ybg-8A-P0K">
                                 <rect key="frame" x="0.0" y="140" width="414" height="588"/>
                                 <subviews>
@@ -484,7 +490,10 @@
                         <constraints>
                             <constraint firstItem="qkL-pH-taP" firstAttribute="leading" secondItem="zb2-EO-swm" secondAttribute="leading" constant="15" id="7Jx-hm-4rK"/>
                             <constraint firstItem="zb2-EO-swm" firstAttribute="trailing" secondItem="qkL-pH-taP" secondAttribute="trailing" constant="15" id="H6c-D5-tKn"/>
+                            <constraint firstItem="oQB-X5-9Ob" firstAttribute="leading" secondItem="zb2-EO-swm" secondAttribute="leading" constant="15" id="Hsx-NW-sYP"/>
+                            <constraint firstItem="oQB-X5-9Ob" firstAttribute="top" secondItem="zb2-EO-swm" secondAttribute="top" constant="30" id="IA1-ye-xR6"/>
                             <constraint firstItem="zb2-EO-swm" firstAttribute="bottom" secondItem="qkL-pH-taP" secondAttribute="bottom" constant="20" id="IbR-9s-QYr"/>
+                            <constraint firstItem="zb2-EO-swm" firstAttribute="trailing" secondItem="oQB-X5-9Ob" secondAttribute="trailing" constant="15" id="Qq5-5c-7qZ"/>
                             <constraint firstItem="qkL-pH-taP" firstAttribute="top" secondItem="Ybg-8A-P0K" secondAttribute="bottom" constant="15" id="TQS-ih-qYr"/>
                             <constraint firstItem="zb2-EO-swm" firstAttribute="trailing" secondItem="Ybg-8A-P0K" secondAttribute="trailing" id="dUA-61-FHc"/>
                             <constraint firstItem="Ybg-8A-P0K" firstAttribute="leading" secondItem="zb2-EO-swm" secondAttribute="leading" id="iaL-Pv-zA0"/>
@@ -496,6 +505,7 @@
                     <connections>
                         <outlet property="btHasAccount" destination="GcT-t3-jKk" id="rso-wB-Bdh"/>
                         <outlet property="btRegister" destination="qkL-pH-taP" id="wKN-yt-ATs"/>
+                        <outlet property="lbUsername" destination="oQB-X5-9Ob" id="nKd-p4-TCx"/>
                         <outlet property="tfConfirm" destination="jJi-TF-O0w" id="YCA-jg-JCb"/>
                         <outlet property="tfPassword" destination="VGA-SJ-Xja" id="bhv-aA-vxU"/>
                         <outlet property="tfUserName" destination="GpR-H8-zTN" id="t1j-Cl-uFk"/>
